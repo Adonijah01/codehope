@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>CodeHope Pokot - Empowering Youth Through Tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .teal-bg {
+            background-color: #008080;
+        }
+
+        .sky-blue-bg {
+            background-color: #87CEEB;
+        }
+
+        .btn-primary {
+            background-color: #4B0082;
+            color: white;
+            font-weight: 600;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-african:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .card-african {
+            border-top: 4px solid #fcbf49;
+            transition: all 0.3s ease;
+        }
+
+        .card-african:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .typewriter {
+            border-right: 3px solid #d62828;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #d62828; }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .gallery-img {
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-img:hover {
+            transform: scale(1.05);
+        }
+        
+        .team-member:hover .team-overlay {
+            opacity: 1;
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .dark-mode {
+            background-color: #1a1a1a;
+            color: #f3f3f3;
+        }
+        
+        .dark-mode .bg-white {
+            background-color: #2d2d2d !important;
+            color: #f3f3f3 !important;
+        }
+        
+        .dark-mode .text-gray-700 {
+            color: #d1d1d1 !important;
+        }
+        
+        .dark-mode .bg-gray-100 {
+            background-color: #333333 !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+
+    <!-- Navigation -->
+    <nav class="bg-blue-900 text-white py-4 sticky top-0 z-40 shadow-lg">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                    <i class="fas fa-laptop-code text-white text-xl"></i>
+                </div>
+                <a href="#" class="text-xl font-bold text-white">CodeHope<span class="text-blue-300">Pokot</span></a>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-yellow-400 transition">Home</a>
+                <a href="#mission" class="hover:text-yellow-400 transition">Mission</a>
+                <a href="#about" class="hover:text-yellow-400 transition">About</a>
+                <a href="#support" class="hover:text-yellow-400 transition">Support</a>
+                <a href="#donate" class="hover:text-yellow-400 transition">Donate</a>
+                <a href="#contact" class="hover:text-yellow-400 transition">Contact</a>
+            </div>
+            
+            <button class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden bg-blue-900 text-white py-4 px-4 fixed w-full z-30 shadow-lg top-16">
+        <div class="flex flex-col space-y-4 text-center">
+            <a href="#home" class="hover:text-yellow-400 transition">Home</a>
+            <a href="#mission" class="hover:text-yellow-400 transition">Mission</a>
+            <a href="#about" class="hover:text-yellow-400 transition">About</a>
+            <a href="#support" class="hover:text-yellow-400 transition">Support</a>
+            <a href="#donate" class="hover:text-yellow-400 transition">Donate</a>
+            <a href="#contact" class="hover:text-yellow-400 transition">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-800/80 to-blue-700/70 z-10"></div>
+        <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" 
+             alt="African students learning computers" 
+             class="absolute inset-0 w-full h-full object-cover">
+        
+        <div class="container mx-auto px-4 z-10 text-center fade-in">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                <span class="text-indigo-200">CodeHope</span><span class="text-white">Pokot</span>
+            </h1>
+            <h2 class="text-xl md:text-4xl text-white mb-8 font-medium">Unlocking Futures with Tech</h2>
+            
+            <div class="typewriter text-xl md:text-1xl text-white mb-12 mx-auto max-w-2xl bg-indigo-900/50 px-6 py-4 rounded-lg">
+                Empowering Girls. Equipping Children. Elevating Communities.
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#donate" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 md:px-6 rounded-full transition transform hover:scale-105 shadow-lg text-sm md:text-base">
+                    <i class="fas fa-donate mr-2"></i> Donate Now
+                </a>
+                <a href="#support" class="bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-6 rounded-full transition transform hover:scale-105">
+                    <i class="fas fa-child mr-2"></i> Sponsor a Child
+                </a>
+                <a href="#contact" class="bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 px-6 rounded-full transition transform hover:scale-105">
+                    <i class="fas fa-hands-helping mr-2"></i> Join as Volunteer
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-0 right-0 flex justify-center">
+            <a href="#mission" class="text-white animate-bounce">
+                <i class="fas fa-chevron-down text-3xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Our Approach -->
+    <section class="py-20 bg-gradient-to-r from-blue-700 to-blue-500 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+                Our <span class="text-black">Approach</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
+                <div class="bg-black bg-opacity-30 p-6 md:p-8 rounded-xl backdrop-blur-sm">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-laptop-code text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">Practical Learning</h3>
+                    <p class="text-center">
+                        Hands-on tech education tailored to local needs, using real-world projects that solve community challenges.
+                    </p>
+                </div>
+                
+                <div class="bg-black bg-opacity-30 p-8 rounded-xl backdrop-blur-sm">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-female text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">Girls First</h3>
+                    <p class="text-center">
+                        Special programs to bridge the gender gap in tech, creating safe spaces for girls to learn and lead.
+                    </p>
+                </div>
+                
+                <div class="bg-black bg-opacity-30 p-8 rounded-xl backdrop-blur-sm">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-users text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4">Community Focus</h3>
+                    <p class="text-center">
+                        Engaging parents and local leaders to create sustainable change through technology education.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section id="mission" class="py-20 sky-blue-bg text-indigo-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-black">
+                Our <span class="text-red-600">Purpose</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover transition">
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-bullseye text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-4 text-black">Mission</h3>
+                    <p class="text-gray-700 text-center">
+                        To bridge the digital divide in rural Kenya through inclusive and accessible tech education, 
+                        empowering the youth of West Pokot with skills that transform their futures and communities.
+                    </p>
+                </div>
+                
+                <div class="bg-yellow-50 p-8 rounded-xl shadow-lg card-hover transition">
+                    <div class="w-16 h-16 bg-black rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-eye text-yellow-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-center mb-4 text-black">Vision</h3>
+                    <p class="text-gray-700 text-center">
+                        A generation of digitally empowered youth rising from West Pokot, creating solutions for local 
+                        challenges and competing in the global digital economy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-black">
+                Our <span class="text-red-600">Story</span>
+            </h2>
+                        
+                        <!-- Timeline -->
+<div class="border-l-4 border-red-600 pl-6 md:pl-8 space-y-8 md:space-y-12">
+    <div class="relative">
+        <div class="absolute -left-8 md:-left-12 top-0 w-6 h-6 md:w-8 md:h-8 bg-yellow-400 rounded-full flex items-center justify-center">
+            <div class="w-6 h-6 bg-black rounded-full"></div>
+        </div>
+        <h4 class="text-xl font-bold mb-2 text-black">May 2025 – Humble Beginnings</h4>
+        <p class="text-gray-700">
+            Inspired by the growing digital divide in West Pokot, the idea of CodeHope Pokot was born. A small team began dreaming of a community-based tech initiative focused on equipping disadvantaged children and girls with essential digital skills.
+        </p>
+    </div>
+
+    <div class="relative">
+        <div class="absolute -left-12 top-0 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
+            <div class="w-6 h-6 bg-black rounded-full"></div>
+        </div>
+        <h4 class="text-xl font-bold mb-2 text-black">June 2025 – Call for Support</h4>
+        <p class="text-gray-700">
+            Outreach officially began for sponsors, donors, and volunteers to bring the vision to life. We are seeking laptops, funding, internet access, and teaching support to launch our very first community class.
+            <br><span class="italic text-sm text-gray-600">“With just one laptop, we could spark a future. Imagine what ten can do.”</span>
+        </p>
+    </div>
+
+    <div class="relative">
+        <div class="absolute -left-12 top-0 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
+            <div class="w-6 h-6 bg-black rounded-full"></div>
+        </div>
+        <h4 class="text-xl font-bold mb-2 text-black">Future Goals – Expanding Reach</h4>
+        <p class="text-gray-700">
+            Once launched, our goal is to establish community-based learning centers and mobile tech labs to serve even the most remote areas of West Pokot.
+        </p>
+    </div>
+
+    <div class="relative">
+        <div class="absolute -left-12 top-0 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
+            <div class="w-6 h-6 bg-black rounded-full"></div>
+        </div>
+        <h4 class="text-xl font-bold mb-2 text-black">Future Vision – Girls Who Code Pokot</h4>
+        <p class="text-gray-700">
+            We're planning a dedicated program to encourage young girls to embrace coding, STEM, and leadership through hands-on learning, mentorship, and storytelling from female tech leaders.
+        </p>
+    </div>
+
+    <div class="relative">
+        <div class="absolute -left-12 top-0 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
+            <div class="w-6 h-6 bg-black rounded-full"></div>
+        </div>
+        <h4 class="text-xl font-bold mb-2 text-black">Next Milestone – First Launch</h4>
+        <p class="text-gray-700">
+            With your support, we aim to launch our first training center by late 2025. Every donation, laptop, and helping hand brings us closer to that goal.
+        </p>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How You Can Support -->
+    <section id="support" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-black">
+                How You Can <span class="text-red-600">Support</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+                <!-- Donate Devices -->
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg card-hover transition hover:shadow-xl">
+                    <div class="w-16 h-16 bg-teal-600 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-laptop text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4 text-indigo-900">Donate Laptops/Desktops</h3>
+                    <p class="text-gray-700 text-center mb-6">
+                        Your old laptop or desktop can become a child's window to the digital world. We refurbish and 
+                        repurpose technology for our learning centers.
+                    </p>
+                    <a href="#donate" class="block text-center bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-full transition">
+                        Learn More
+                    </a>
+                </div>
+                
+                <!-- Sponsor Materials -->
+                <div class="bg-gray-100 p-8 rounded-xl shadow-lg card-hover transition">
+                    <div class="w-16 h-16 bg-black rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-book text-yellow-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4 text-black">Sponsor Materials</h3>
+                    <p class="text-gray-700 text-center mb-6">
+                        Help provide textbooks, notebooks, and learning kits that make tech education accessible and 
+                        engaging for our students.
+                    </p>
+                    <a href="#donate" class="block text-center bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full transition">
+                        Contribute
+                    </a>
+                </div>
+                
+                <!-- Volunteer -->
+                <div class="bg-gray-100 p-8 rounded-xl shadow-lg card-hover transition">
+                    <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-hands-helping text-black text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4 text-black">Volunteer</h3>
+                    <p class="text-gray-700 text-center mb-6">
+                        Share your skills! Teach remotely or onsite, mentor students, or help with administrative tasks. 
+                        Every hour makes a difference.
+                    </p>
+                    <a href="#contact" class="block text-center bg-black hover:bg-gray-800 text-white font-bold py-2 px-4 rounded-full transition">
+                        Get Involved
+                    </a>
+                </div>
+                
+                <!-- Internet Bundles -->
+                <div class="bg-gray-100 p-8 rounded-xl shadow-lg card-hover transition">
+                    <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-wifi text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4 text-black">Internet Access</h3>
+                    <p class="text-gray-700 text-center mb-6">
+                        Sponsor internet bundles to keep our learning centers connected. Just $20 provides a month of 
+                        connectivity for an entire class.
+                    </p>
+                    <a href="#donate" class="block text-center bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-full transition">
+                        Support
+                    </a>
+                </div>
+                
+                <!-- Financial Donation -->
+                <div class="bg-gray-100 p-8 rounded-xl shadow-lg card-hover transition">
+                    <div class="w-16 h-16 bg-black rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-donate text-yellow-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4 text-black">Financial Support</h3>
+                    <p class="text-gray-700 text-center mb-6">
+                        Your monetary contributions help sustain our programs, pay trainers, and expand our reach to 
+                        more underserved communities.
+                    </p>
+                    <a href="#donate" class="block text-center bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full transition">
+                        Donate Now
+                    </a>
+                </div>
+                
+                <!-- Spread the Word -->
+                <div class="bg-gray-100 p-8 rounded-xl shadow-lg card-hover transition">
+                    <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-share-alt text-black text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-4 text-black">Spread the Word</h3>
+                    <p class="text-gray-700 text-center mb-6">
+                        Follow us on social media, share our story, and help connect us with potential partners and 
+                        sponsors who can amplify our impact.
+                    </p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-black hover:text-red-600 transition">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-black hover:text-red-600 transition">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-black hover:text-red-600 transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-black hover:text-red-600 transition">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donate Section -->
+    <section id="donate" class="py-20 bg-indigo-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-black">
+                Make a <span class="text-red-600">Difference</span>
+            </h2>
+            
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-red-600 p-8 text-white">
+                        <h3 class="text-2xl font-bold mb-6">Your Support Matters</h3>
+                        <p class="mb-6">
+                            Every contribution, no matter the size, helps us bridge the digital divide in West Pokot. 
+                            Here's what your donation can provide:
+                        </p>
+                        
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-yellow-400 mt-1 mr-3"></i>
+                                <span>$25 - School supplies for one student for a year</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-yellow-400 mt-1 mr-3"></i>
+                                <span>$50 - Internet access for a classroom for one month</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-yellow-400 mt-1 mr-3"></i>
+                                <span>$100 - Sponsor a girl's participation in our coding bootcamp</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-yellow-400 mt-1 mr-3"></i>
+                                <span>$500 - Help refurbish and deploy a donated computer</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="mt-8 bg-black bg-opacity-20 p-4 rounded-lg">
+                            <h4 class="font-bold mb-2">Other Ways to Give:</h4>
+                            <p>
+                                Corporate matching • Stock donations • In-kind gifts • Planned giving
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 p-8">
+                        <h3 class="text-2xl font-bold mb-6 text-black">Donation Form</h3>
+                        
+                        <form>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 mb-2" for="name">Full Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 mb-2" for="email">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 mb-2">Donation Type</label>
+                                <div class="flex flex-wrap gap-2">
+                                    <label class="inline-flex items-center">
+                                        <input type="radio" name="donationType" value="one-time" class="form-radio text-red-600" checked>
+                                        <span class="ml-2">One-time</span>
+                                    </label>
+                                    <label class="inline-flex items-center">
+                                        <input type="radio" name="donationType" value="monthly" class="form-radio text-red-600">
+                                        <span class="ml-2">Monthly</span>
+                                    </label>
+                                    <label class="inline-flex items-center">
+                                        <input type="radio" name="donationType" value="device" class="form-radio text-red-600">
+                                        <span class="ml-2">Device Donation</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 mb-2" for="amount">Amount (USD)</label>
+                                <select id="amount" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                                    <option value="25">$25</option>
+                                    <option value="50">$50</option>
+                                    <option value="100">$100</option>
+                                    <option value="250">$250</option>
+                                    <option value="500">$500</option>
+                                    <option value="custom">Custom Amount</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 mb-2">Payment Method</label>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <button type="button" class="bg-gray-200 hover:bg-gray-300 py-2 px-4 rounded-lg flex items-center justify-center">
+                                        <i class="fab fa-cc-paypal text-blue-500 mr-2"></i> PayPal
+                                    </button>
+                                    <button type="button" class="bg-gray-200 hover:bg-gray-300 py-2 px-4 rounded-lg flex items-center justify-center">
+                                        <i class="fas fa-mobile-alt text-green-500 mr-2"></i> M-PESA
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg transition">
+                                Complete Donation
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="#" class="inline-flex items-center text-black hover:text-red-600 transition">
+                    <i class="fas fa-download mr-2"></i> Download Sponsorship Brochure (PDF)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Sponsors -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-black">
+                Champions Behind the <span class="text-red-600">Code</span>
+            </h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+                <div class="bg-gray-100 p-6 rounded-lg flex items-center justify-center h-32 hover:shadow-lg transition">
+                    <img src="https://via.placeholder.com/150x80?text=Tech+For+Good" alt="Tech For Good" class="max-h-16">
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg flex items-center justify-center h-32 hover:shadow-lg transition">
+                    <img src="https://via.placeholder.com/150x80?text=AfriTech" alt="AfriTech" class="max-h-16">
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg flex items-center justify-center h-32 hover:shadow-lg transition">
+                    <img src="https://via.placeholder.com/150x80?text=Kenya+Ed" alt="Kenya Ed" class="max-h-16">
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg flex items-center justify-center h-32 hover:shadow-lg transition">
+                    <img src="https://via.placeholder.com/150x80?text=Digital+Future" alt="Digital Future" class="max-h-16">
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg flex items-center justify-center h-32 hover:shadow-lg transition">
+                    <img src="https://via.placeholder.com/150x80?text=Women+In+Tech" alt="Women In Tech" class="max-h-16">
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <p class="text-gray-700 mb-6">
+                    Interested in becoming a corporate sponsor? We offer various partnership opportunities.
+                </p>
+                <a href="#contact" class="inline-block bg-black hover:bg-gray-800 text-white font-bold py-3 px-6 rounded-full transition">
+                    Partner With Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-black">
+                Moments of <span class="text-red-600">Impact</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="gallery-img overflow-hidden rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" 
+                         alt="Students learning" 
+                         class="w-full h-64 object-cover transition duration-500 hover:scale-110">
+                </div>
+                <div class="gallery-img overflow-hidden rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Girl coding" 
+                         class="w-full h-64 object-cover transition duration-500 hover:scale-110">
+                </div>
+                <div class="gallery-img overflow-hidden rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" 
+                         alt="Classroom session" 
+                         class="w-full h-64 object-cover transition duration-500 hover:scale-110">
+                </div>
+                <div class="gallery-img overflow-hidden rounded-lg shadow-lg relative group">
+                    <img src="https://images.unsplash.com/photo-1581092921461-39b2f1c9f740?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Tech workshop in Kenya" 
+                         class="w-full h-64 object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <p class="text-white text-lg font-bold">Girls Coding Workshop</p>
+                    </div>
+                </div>
+                <div class="gallery-img overflow-hidden rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" 
+                         alt="Group project" 
+                         class="w-full h-64 object-cover transition duration-500 hover:scale-110">
+                </div>
+                <div class="gallery-img overflow-hidden rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" 
+                         alt="Graduation ceremony" 
+                         class="w-full h-64 object-cover transition duration-500 hover:scale-110">
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="#" class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full transition">
+                    View Full Gallery
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Team -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-black">
+                Meet Our <span class="text-red-600">Team</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Founder -->
+                <div class="team-member text-center px-2">
+                    <div class="relative w-32 h-32 md:w-40 md:h-40 mx-auto mb-4 rounded-full overflow-hidden border-4 border-yellow-400">
+                        <img src="https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" 
+                             alt="Sarah Chebet" 
+                             class="w-full h-full object-cover">
+                        <div class="team-overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 transition">
+                            <div class="text-white p-4">
+                                <p>"Every child deserves access to digital opportunities."</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-1 text-black">Irene Cherono</h3>
+                    <p class="text-red-600 font-medium mb-2">Founder & Director</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-gray-600 hover:text-red-600 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-red-600 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Lead Trainer -->
+                <div class="team-member text-center">
+                    <div class="relative w-40 h-40 mx-auto mb-4 rounded-full overflow-hidden border-4 border-yellow-400">
+                        <a href="#"
+                             alt="James Kipchirchir" 
+                             class="w-full h-full object-cover">
+                        <div class="team-overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 transition">
+                            <div class="text-white p-4">
+                                <p>"Seeing students solve problems with code is my greatest joy."</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-1 text-black">James Kipchirchir</h3>
+                    <p class="text-red-600 font-medium mb-2">Lead Trainer</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-gray-600 hover:text-red-600 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-red-600 transition">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Girls Program Coordinator -->
+                <div class="team-member text-center">
+                    <div class="relative w-40 h-40 mx-auto mb-4 rounded-full overflow-hidden border-4 border-yellow-400">
+                        <a href="" 
+                             alt="Grace Atieno" 
+                             class="w-full h-full object-cover">
+                        <div class="team-overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 transition">
+                            <div class="text-white p-4">
+                                <p>"Empowering girls with tech skills empowers entire communities."</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-1 text-black">Grace Atieno</h3>
+                    <p class="text-red-600 font-medium mb-2">Girls Program Coordinator</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-gray-600 hover:text-red-600 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-red-600 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Volunteer Coordinator -->
+                <div class="team-member text-center">
+                    <div class="relative w-40 h-40 mx-auto mb-4 rounded-full overflow-hidden border-4 border-yellow-400">
+                        <a href="" 
+                             alt="David Omondi" 
+                             class="w-full h-full object-cover">
+                        <div class="team-overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 transition">
+                            <div class="text-white p-4">
+                                <p>"Volunteers bring diverse skills that enrich our programs."</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-1 text-black">David Omondi</h3>
+                    <p class="text-red-600 font-medium mb-2">Volunteer Coordinator</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-gray-600 hover:text-red-600 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-red-600 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <p class="text-gray-700 mb-6">
+                    Our team is supported by 15 dedicated volunteers and 8 community educators across West Pokot.
+                </p>
+                <a href="#contact" class="inline-block bg-black hover:bg-gray-800 text-white font-bold py-3 px-6 rounded-full transition">
+                    Join Our Team
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-black">
+                Voices of <span class="text-red-600">Impact</span>
+            </h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white p-8 rounded-xl shadow-lg testimonial-card">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" 
+                             alt="Naomi Chepkoech" 
+                             class="w-16 h-16 rounded-full object-cover border-2 border-yellow-400">
+                        <div class="ml-4">
+                            <h3 class="text-xl font-bold text-black">Naomi Chepkoech</h3>
+                            <p class="text-red-600">Student, Age 14</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        "Before CodeHope Pokot, I had never touched a computer. Now I can create websites and even 
+                        teach my younger siblings. I dream of becoming a software engineer!"
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                    <div class="bg-white p-6 rounded-xl shadow-lg testimonial-card">
+                        <div class="flex items-center mb-4">
+                            <img src="#" 
+                                 alt="Pauline Nekesa" 
+                                 class="w-12 h-12 rounded-full object-cover border-2 border-yellow-400">
+                            <div class="ml-3">
+                                <h3 class="font-bold text-black">Pauline Nekesa</h3>
+                                <p class="text-red-600 text-sm">Parent</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 text-sm">
+                            "My daughter's confidence has grown tremendously since joining the girls' coding program. 
+                            She now helps me with my small business records using Excel."
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg testimonial-card">
+                        <div class="flex items-center mb-4">
+                            <img src="" 
+                                 alt="Michael Rotich" 
+                                 class="w-12 h-12 rounded-full object-cover border-2 border-yellow-400">
+                            <div class="ml-3">
+                                <h3 class="font-bold text-black">Michael Rotich</h3>
+                                <p class="text-red-600 text-sm">Local Business Owner</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 text-sm">
+                            "We've hired two CodeHope graduates for our IT support team. Their skills are impressive, 
+                            and their work ethic is exceptional. This program is transforming our workforce."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-black">
+                Get In <span class="text-red-600">Touch</span>
+            </h2>
+            
+            <div class="max-w-6xl mx-auto">
+                <div class="md:flex gap-8">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <h3 class="text-2xl font-bold mb-6 text-black">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white mr-4">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-black">Our Location</h4>
+                                    <p class="text-gray-700">Kapenguria Town, West Pokot County, Kenya</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center text-black mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-black">Email Us</h4>
+                                    <p class="text-gray-700">info@codehopepokot.org</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-black rounded-full flex items-center justify-center text-yellow-400 mr-4">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-black">Call Us</h4>
+                                    <p class="text-gray-700">+254 712 345 678</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-white mr-4">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-black">WhatsApp</h4>
+                                    <p class="text-gray-700">+254 712 345 678</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-2xl font-bold mt-10 mb-6 text-black">Connect With Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-12 h-12 bg-black hover:bg-gray-800 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-red-600 hover:bg-red-700 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-blue-500 hover:bg-blue-600 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-blue-700 hover:bg-blue-800 rounded-full flex items-center justify-center text-white transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="mt-8 bg-gray-100 p-6 rounded-lg">
+                            <h4 class="font-bold mb-4 text-black">Volunteer Inquiries</h4>
+                            <p class="text-gray-700 mb-4">
+                                Interested in volunteering with us? Please include your skills and availability in your message.
+                            </p>
+                            <a href="mailto:volunteer@codehopepokot.org" class="text-red-600 hover:underline">
+                                volunteer@codehopepokot.org
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-bold mb-6 text-black">Send Us a Message</h3>
+                        
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="contact-name">Full Name</label>
+                                <input type="text" id="contact-name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="contact-email">Email</label>
+                                <input type="email" id="contact-email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="contact-subject">Subject</label>
+                                <select id="contact-subject" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                                    <option value="">Select a subject</option>
+                                    <option value="donation">Donation Inquiry</option>
+                                    <option value="volunteer">Volunteer Opportunity</option>
+                                    <option value="partnership">Partnership Inquiry</option>
+                                    <option value="media">Media Request</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="contact-message">Message</label>
+                                <textarea id="contact-message" rows="5" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg transition">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="mt-16 bg-gray-100 rounded-xl overflow-hidden">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.123456789012!2d35.12345678901234!3d1.2345678912345678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMcKwMTQnMDQuNSJOIDM1wrAwNyczNi4xIkU!5e0!3m2!1sen!2ske!4v1234567890123!5m2!1sen!2ske" 
+                            width="100%" 
+                            height="400" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="py-16 bg-red-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                Stay <span class="text-yellow-400">Connected</span>
+            </h2>
+            <p class="mb-8 max-w-2xl mx-auto">
+                Subscribe to our newsletter for updates on our programs, success stories, and how you can help.
+            </p>
+            <form class="max-w-md mx-auto flex">
+                <input type="email" placeholder="Your email address" 
+                       class="flex-grow px-4 py-3 rounded-l-lg focus:outline-none text-black">
+                <button type="submit" 
+                        class="bg-black hover:bg-gray-900 text-white font-bold py-3 px-6 rounded-r-lg transition">
+                    Subscribe
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-laptop-code text-black"></i>
+                        </div>
+                        <span class="text-xl font-bold text-yellow-400">CodeHope<span class="text-red-600">Pokot</span></span>
+                    </div>
+                    <p class="text-gray-400">
+                        Empowering the youth of West Pokot through digital literacy and tech education since 2025.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-yellow-400">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-red-600 transition">Home</a></li>
+                        <li><a href="#about" class="hover:text-red-600 transition">About Us</a></li>
+                        <li><a href="#mission" class="hover:text-red-600 transition">Our Mission</a></li>
+                        <li><a href="#support" class="hover:text-red-600 transition">Ways to Help</a></li>
+                        <li><a href="#donate" class="hover:text-red-600 transition">Donate</a></li>
+                        <li><a href="#contact" class="hover:text-red-600 transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-yellow-400">Programs</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-red-600 transition">Digital Literacy</a></li>
+                        <li><a href="#" class="hover:text-red-600 transition">Girls Who Code</a></li>
+                        <li><a href="#" class="hover:text-red-600 transition">Tech for Youth</a></li>
+                        <li><a href="#" class="hover:text-red-600 transition">Community Workshops</a></li>
+                        <li><a href="#" class="hover:text-red-600 transition">Teacher Training</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-yellow-400">Stay Updated</h3>
+                    <p class="text-gray-400 mb-4">
+                        Subscribe to our newsletter for updates on our programs and impact.
+                    </p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg focus:outline-none text-black w-full">
+                        <button type="submit" class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-r-lg transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    
+                    <div class="mt-6">
+                        <h4 class="font-bold mb-2">Download Our App</h4>
+                        <div class="flex space-x-2">
+                            <a href="#" class="bg-gray-800 hover:bg-gray-700 px-3 py-2 rounded-lg flex items-center">
+                                <i class="fab fa-google-play mr-2"></i>
+                                <span class="text-xs">Google Play</span>
+                            </a>
+                            <a href="#" class="bg-gray-800 hover:bg-gray-700 px-3 py-2 rounded-lg flex items-center">
+                                <i class="fab fa-apple mr-2"></i>
+                                <span class="text-xs">App Store</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">
+                    &copy; 2025 CodeHope Pokot. All rights reserved.
+                </p>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">FAQ</a>
+                    <!-- Dark Mode Toggle -->
+    <div class="fixed right-4 bottom-4 z-50">
+        <button id="darkModeToggle" class="bg-blue-700 text-white p-3 rounded-full shadow-lg hover:bg-blue-800 transition">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('button').addEventListener('click', function() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        
+        darkModeToggle.addEventListener('click', function() {
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+                darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            } else {
+                darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                const mobileMenu = document.getElementById('mobileMenu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Simple animation on scroll
+        const animateOnScroll = function() {
+            const elements = document.querySelectorAll('.fade-in, .card-hover, .testimonial-card');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+
+        // Set initial state for animated elements
+        document.querySelectorAll('.fade-in, .card-hover, .testimonial-card').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        });
+
+        // Run animations when page loads and on scroll
+        window.addEventListener('load', animateOnScroll);
+        window.addEventListener('scroll', animateOnScroll);
+
+        // Hero Carousel
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('#heroCarousel > div');
+        
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.opacity = i === index ? '1' : '0';
+            });
+        }
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+        
+        // Change slide every 5 seconds
+        setInterval(nextSlide, 5000);
+        
+        // Initialize
+        showSlide(0);
+    </script>
+</body>
+</html>
